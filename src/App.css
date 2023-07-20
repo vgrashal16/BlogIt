@@ -1,0 +1,99 @@
+body{
+    color: #222;
+}
+
+main{
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+header a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header a.logo{
+    font-weight: bold;
+}
+
+header nav{
+    display: flex;
+    gap: 30px;
+}
+
+div.seePosts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.post{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 400px;
+}
+
+div.img{
+    width: 50%;
+
+}
+
+div.content{
+    width: 50%;
+    margin: 0;
+}
+
+h1.title{
+    margin: 0;
+}
+
+p.authInfo{
+    font-size: 0.6rem;
+}
+
+p.info{
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.login, .register{
+    display: flex;
+    flex-direction: column;
+}
+
+.login input, .register input{
+    padding: 8px;
+    margin: 8px;
+    width: auto;
+    border: 0;
+    border-radius: 12px;
+    border-bottom: 3px solid #eee;
+}
+
+.login button, .register button{
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 8px;
+}
+
+.login button:hover, .register button:hover{
+    background-color: #e89404;
+}
+
+.login input:focus, .register input:focus{
+    outline: 0;
+    border-radius: 12px;
+    border-bottom: 3px solid #e89404;
+}
