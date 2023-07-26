@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { Toaster, toast } from 'react-hot-toast';
+import { Navigate } from 'react-router-dom';
 function RegisterPage() {
 
   const[username, setUsername] = useState('');
   const[password, setPassword] = useState('');
+  const[redirect, setRedirect] = useState(false);
 
   const url = "http://localhost:8000/register";
 
   const toastStyle = {style: {
     border: '0',
-    borderBottom: '2px solid #e89404',
+    borderBottom: '2px solid #660066',
     borderRadius: '16px',
     color: '#000000',
   },
@@ -26,12 +28,19 @@ function RegisterPage() {
         if (res.data === "True") { 
           toast.error("Username already taken, please choose another username", toastStyle);
         }
+        else if(res.data === "Done") {
+          toast.success("Registration successful", toastStyle);
+          setTimeout(() => setRedirect(true), 2000);
+        }
       })
       .catch((error) => {
         console.error("Error creating user:", error);
       });
   };
   
+  if(redirect){
+    return <Navigate to={'/login'}/>
+  }
   return (
     <>
     <Toaster 

@@ -1,17 +1,19 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 import { Toaster, toast } from 'react-hot-toast';
+import { Navigate } from 'react-router-dom';
 
 function LoginPage() {
 
     const[username, setUsername] = useState('');
     const[password, setPassword] = useState('');
+    const[redirect, setRedirect] = useState(false);
 
     const url = "http://localhost:8000/login";
 
     const toastStyle = {style: {
       border: '0',
-      borderBottom: '2px solid #e89404',
+      borderBottom: '2px solid #660066',
       borderRadius: '16px',
       color: '#000000',
     },
@@ -26,8 +28,16 @@ function LoginPage() {
       .then((res) => {
         if(res.data === "True"){
           toast.success("Login success, logging you in...", toastStyle);
+          setTimeout(() => setRedirect(true), 2000);
+        }
+        else if(res.data === "False"){
+          toast.error("username/password may be incorrect", toastStyle);
         }
       })
+    }
+
+    if(redirect){
+      return <Navigate to={'/'}/>
     }
 
   return (

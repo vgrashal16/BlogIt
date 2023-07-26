@@ -72,6 +72,13 @@ p.info{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 0.5px solid rgb(243, 237, 237);
+    border-bottom, border-right: 2px solid black;
+    border-radius: 16px;
+    box-shadow: 5px 10px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    margin-top: 150px;
 }
 
 .login input, .register input{
@@ -93,12 +100,13 @@ p.info{
 }
 
 .login button:hover, .register button:hover{
-    background-color: #e89404;
+    background-color: #660066;
+    color: white;
 }
 
 .login input:focus, .register input:focus{
     outline: 0;
     border-radius: 12px;
-    border-bottom: 3px solid #e89404;
+    border-bottom: 3px solid #660066;
 }
 
