@@ -22,6 +22,7 @@ header a{
 
 header a.logo{
     font-weight: bold;
+    font-size: x-large;
 }
 
 header nav{
@@ -69,12 +70,14 @@ p.info{
 .login, .register{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .login input, .register input{
     padding: 8px;
     margin: 8px;
-    width: auto;
+    width: 400px;
     border: 0;
     border-radius: 12px;
     border-bottom: 3px solid #eee;
@@ -86,6 +89,7 @@ p.info{
     border-radius: 4px;
     padding: 8px;
     margin: 8px;
+    width: 300px;
 }
 
 .login button:hover, .register button:hover{
@@ -97,3 +101,4 @@ p.info{
     border-radius: 12px;
     border-bottom: 3px solid #e89404;
 }
+
