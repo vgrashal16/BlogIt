@@ -24,13 +24,13 @@ function LoginPage() {
     duration: 2000,}
 
     const handleSubmit = () => {
-      axios.post(url, {username, password})
+      axios.post(url, {username, password},{ withCredentials: true })
       .then((res) => {
-        if(res.data === "True"){
+        if(res.status === 200){
           toast.success("Login success, logging you in...", toastStyle);
           setTimeout(() => setRedirect(true), 2000);
         }
-        else if(res.data === "False"){
+        else{
           toast.error("username/password may be incorrect", toastStyle);
         }
       })

@@ -3,9 +3,12 @@ body{
 }
 
 main{
-    padding: 10px;
-    max-width: 600px;
+    padding: 20px;
+    max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header{
@@ -13,11 +16,23 @@ header{
     justify-content: space-between;
     margin-bottom: 50px;
     align-items: center;
+    border: 0.5px solid rgb(243, 237, 237);
+    border-bottom, border-right: 2px solid black;
+    box-shadow: 5px 10px;
+    padding: 20px;
+    width: 100%;
 }
 
 header a{
     text-decoration: none;
     color: inherit;
+    cursor:pointer;
+}
+
+header a:hover{
+    font-size:18px;
+    -webkit-transition:0.1s;
+    transition-timing-function: linear;
 }
 
 header a.logo{
@@ -40,13 +55,24 @@ div.seePosts{
 div.post{
     display: flex;
     flex-direction: row;
-    width: 400px;
+    width: 700px;
     height: 400px;
+    margin: 24px;
+    align-items: center;
+    border: 0px solid rgba(0, 0, 0,0.1);
+    cursor: pointer;
+}
+
+div.post:hover{
+    box-shadow: 6px 12px 8px rgb(44, 2, 37, 0.7);
+    border: 2px solid rgba(0, 0, 0,0.1);
+    border-radius: 8px;
+    -webkit-transition:0.3s;
+    transition-timing-function: linear;
 }
 
 div.img{
     width: 50%;
-
 }
 
 div.content{
@@ -69,6 +95,8 @@ p.info{
 
 .login, .register{
     display: flex;
+    width: 600px;
+    height: 250px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -79,6 +107,7 @@ p.info{
     padding-bottom: 40px;
     padding-top: 20px;
     margin-top: 150px;
+    
 }
 
 .login input, .register input{
@@ -102,6 +131,11 @@ p.info{
 .login button:hover, .register button:hover{
     background-color: #660066;
     color: white;
+    width: 320px;
+    font-size: 15px;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+    -webkit-transition:0.3s;
+    transition-timing-function: linear;
 }
 
 .login input:focus, .register input:focus{
